@@ -103,5 +103,19 @@ class LongestIncreasingSubsequenceTest {
         int[] expected = new int[]{Integer.MAX_VALUE};
         assertArrayEquals(expected, LongestIncreasingSubsequence.getLongestIncreasingSubsequence(input), "Array with Integer.MAX_VALUE should return it as the subsequence.");
     }
+
+    // testes data flow
+
+    @Test
+    void testDataFlow1(){
+        int[] input = new int[]{0,1,2};
+        int[] expected = new int[]{0,1,2};
+    }
+
+    @Test
+    void testDataFlow2(){
+        int[] input = new int[]{2,1,0};
+        int[] expected = new int[]{0};
+    }
 }
 
