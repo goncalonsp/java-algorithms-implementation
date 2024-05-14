@@ -1,6 +1,5 @@
-package com.jwetherell.algorithms.sorts;
+package com.jwetherell.algorithms.sequence;
 
-import com.jwetherell.algorithms.sequence.LongestIncreasingSubsequence;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -108,13 +107,13 @@ class LongestIncreasingSubsequenceTest {
 
     @Test
     void testDataFlow1(){
-        int[] input = new int[]{0,1,2};
-        int[] expected = new int[]{0,1,2};
+        int[] input = new int[]{0, 1, 2};
+        int[] expected = new int[]{0, 1, 2};
     }
 
     @Test
     void testDataFlow2(){
-        int[] input = new int[]{2,1,0};
+        int[] input = new int[]{2, 1, 0};
         int[] expected = new int[]{0};
     }
 }

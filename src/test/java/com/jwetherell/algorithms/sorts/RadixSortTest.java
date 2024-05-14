@@ -20,6 +20,34 @@ class RadixSortTest {
     }
 
     @Test
+    void sortSingleElementNot0() {
+        Integer[] input = new Integer[]{5};
+        Integer[] sorted = RadixSort.sort(input);
+        assertArrayEquals(new Integer[]{5}, sorted, "Array with one element should return the same element.");
+    }
+
+    @Test
+    void sortSingleElementTwoDigits() {
+        Integer[] input = new Integer[]{10};
+        Integer[] sorted = RadixSort.sort(input);
+        assertArrayEquals(new Integer[]{10}, sorted, "Array with one element should return the same element.");
+    }
+
+    @Test
+    void sortTwoElementsDifferent() {
+        Integer[] input = new Integer[]{1, 2};
+        Integer[] sorted = RadixSort.sort(input);
+        assertArrayEquals(new Integer[]{1, 2}, sorted, "Array with one element should return the same element.");
+    }
+
+    @Test
+    void sortTwoElementsEqual() {
+        Integer[] input = new Integer[]{1, 1};
+        Integer[] sorted = RadixSort.sort(input);
+        assertArrayEquals(new Integer[]{1, 1}, sorted, "Array with one element should return the same element.");
+    }
+
+    @Test
     void sortIdenticalElements() {
         Integer[] input = new Integer[]{7, 7, 7};
         Integer[] sorted = RadixSort.sort(input);
